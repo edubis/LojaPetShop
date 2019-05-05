@@ -13,6 +13,7 @@ public class TelaLogin extends AppCompatActivity {
     Button btnLogar;
     EditText txtUsuario;
     EditText txtSenha;
+    Button btnTeste;
 
 
     @Override
@@ -24,6 +25,8 @@ public class TelaLogin extends AppCompatActivity {
         btnLogar = (Button) findViewById(R.id.btnLogar);
         txtUsuario = (EditText) findViewById(R.id.txtUsuario);
         txtSenha = (EditText) findViewById(R.id.txtSenha);
+
+        btnTeste = (Button) findViewById(R.id.btnTeste);
 
         btnLogar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +45,13 @@ public class TelaLogin extends AppCompatActivity {
             }
         });
 
+        btnTeste.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(TelaLogin.this,TelaProduto.class);
+                startActivity(i);
+            }
+        });
 
     }
 
